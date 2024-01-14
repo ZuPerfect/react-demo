@@ -5,7 +5,10 @@ export const Counter: React.FC = () => {
   const [count, setCount] = useState(0);
   return (
     <>
-      <antd.Divider>当前数字：{count}</antd.Divider>
+      <antd.Badge count={count}>
+        <antd.Avatar shape="square" size="large" />
+      </antd.Badge>
+      <p></p>
       <antd.Button onClick={() => setCount((count) => count + 1)}>
         点击+1
       </antd.Button>
